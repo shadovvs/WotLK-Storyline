@@ -28,9 +28,9 @@
 -- end
 -- @class file
 -- @name AceAddon-3.0.lua
--- @release $Id: AceAddon-3.0.lua 1036 2011-08-16 22:45:05Z nevcairiel $
+-- @release $Id: AceAddon-3.0.lua 895 2009-12-06 16:28:55Z nevcairiel $
 
-local MAJOR, MINOR = "AceAddon-3.0", 11
+local MAJOR, MINOR = "AceAddon-3.0", 5
 local AceAddon, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not AceAddon then return end -- No Upgrade needed.
@@ -153,7 +153,6 @@ function AceAddon:NewAddon(objectorname, ...)
 	setmetatable( object, addonmeta )
 	self.addons[name] = object
 	object.modules = {}
-	object.orderedModules = {}
 	object.defaultModuleLibraries = {}
 	Embed( object ) -- embed NewModule, GetModule methods
 	self:EmbedLibraries(object, select(i,...))
@@ -286,7 +285,6 @@ function NewModule(self, name, prototype, ...)
 	
 	safecall(self.OnModuleCreated, self, module) -- Was in Ace2 and I think it could be a cool thing to have handy.
 	self.modules[name] = module
-	tinsert(self.orderedModules, module)
 	
 	return module
 end
@@ -491,14 +489,12 @@ local pmixins = {
 -- target (object) - target object to embed aceaddon in
 --
 -- this is a local function specifically since it's meant to be only called internally
-function Embed(target, skipPMixins)
+function Embed(target)
 	for k, v in pairs(mixins) do
 		target[k] = v
 	end
-	if not skipPMixins then
-		for k, v in pairs(pmixins) do
-			target[k] = target[k] or v
-		end
+	for k, v in pairs(pmixins) do
+		target[k] = target[k] or v
 	end
 end
 
@@ -551,9 +547,8 @@ function AceAddon:EnableAddon(addon)
 		end
 	
 		-- enable possible modules.
-		local modules = addon.orderedModules
-		for i = 1, #modules do
-			self:EnableAddon(modules[i])
+		for name, module in pairs(addon.modules) do
+			self:EnableAddon(module)
 		end
 	end
 	return self.statuses[addon.name] -- return true if we're disabled
@@ -585,9 +580,8 @@ function AceAddon:DisableAddon(addon)
 			if lib then safecall(lib.OnEmbedDisable, lib, addon) end
 		end
 		-- disable possible modules.
-		local modules = addon.orderedModules
-		for i = 1, #modules do
-			self:DisableAddon(modules[i])
+		for name, module in pairs(addon.modules) do
+			self:DisableAddon(module)
 		end
 	end
 	
@@ -619,8 +613,7 @@ function AceAddon:IterateModulesOfAddon(addon) return pairs(addon.modules) end
 
 -- Event Handling
 local function onEvent(this, event, arg1)
-	-- 2011-08-17 nevcairiel - ignore the load event of Blizzard_DebugTools, so a potential startup error isn't swallowed up
-	if (event == "ADDON_LOADED"  and arg1 ~= "Blizzard_DebugTools") or event == "PLAYER_LOGIN" then
+	if event == "ADDON_LOADED" or event == "PLAYER_LOGIN" then
 		-- if a addon loads another addon, recursion could happen here, so we need to validate the table on every iteration
 		while(#AceAddon.initializequeue > 0) do
 			local addon = tremove(AceAddon.initializequeue, 1)
@@ -645,15 +638,5 @@ AceAddon.frame:SetScript("OnEvent", onEvent)
 
 -- upgrade embeded
 for name, addon in pairs(AceAddon.addons) do
-	Embed(addon, true)
-end
-
--- 2010-10-27 nevcairiel - add new "orderedModules" table
-if oldminor and oldminor < 10 then
-	for name, addon in pairs(AceAddon.addons) do
-		addon.orderedModules = {}
-		for module_name, module in pairs(addon.modules) do
-			tinsert(addon.orderedModules, module)
-		end
-	end
+	Embed(addon)
 end

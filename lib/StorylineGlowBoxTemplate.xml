@@ -1,0 +1,216 @@
+<!-- CHANGE:Shadovv: GlowBoxTemplate was implemented in cataclysm -->
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	
+	<Texture name="HelpPlateArrowUP" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="53" y="21"/>	
+		<TexCoords left="0.78515625" right="0.99218750" bottom="0.54687500" top="0.58789063"/>	
+	</Texture>
+	<Texture name="HelpPlateArrowDOWN" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="53" y="21"/>	
+		<TexCoords left="0.78515625" right="0.99218750" top="0.54687500" bottom="0.58789063"/>	
+	</Texture>
+	<Texture name="HelpPlateArrow-GlowDOWN" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="65" y="28"/>	
+		<TexCoords left="0.40625000" right="0.66015625" top="0.77343750" bottom="0.82812500"/>	
+	</Texture>
+	<Texture name="HelpPlateArrow-GlowUP" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="65" y="28"/>	
+		<TexCoords left="0.40625000" right="0.66015625" bottom="0.77343750" top="0.82812500"/>	
+	</Texture>
+	
+	<Texture name="StorylineHelpPlateBox-Glow-TopLeft" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="5" y="5"/>	
+		<TexCoords left="0.91796875" right="0.96093750" top="0.65625000" bottom="0.67773438"/>	
+	</Texture>
+	<Texture name="StorylineHelpPlateBox-Glow-TopRight" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="5" y="5"/>	
+		<TexCoords left="0.12890625" right="0.17187500" top="0.96679688" bottom="0.98828125"/>	
+	</Texture>
+	<Texture name="StorylineHelpPlateBox-Glow-BottomLeft" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="5" y="5"/>	
+		<TexCoords left="0.30859375" right="0.35156250" top="0.96679688" bottom="0.98828125"/>	
+	</Texture>
+	<Texture name="StorylineHelpPlateBox-Glow-BottomRight" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="5" y="5"/>	
+		<TexCoords left="0.94921875" right="0.99218750" top="0.32226563" bottom="0.34375000"/>	
+	</Texture>
+	
+	<Texture name="StorylineHelpPlateBox-Shadow-TopLeft" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="8" y="8"/>	
+		<TexCoords left="0.89062500" right="0.98828125" top="0.45703125" bottom="0.50585938"/>	
+	</Texture>
+	<Texture name="StorylineHelpPlateBox-Shadow-TopRight" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="8" y="8"/>	
+		<TexCoords left="0.66796875" right="0.76562500" top="0.77343750" bottom="0.82226563"/>	
+	</Texture>
+	<Texture name="StorylineHelpPlateBox-Shadow-BottomLeft" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="8" y="8"/>	
+		<TexCoords left="0.77343750" right="0.87109375" top="0.77343750" bottom="0.82226563"/>	
+	</Texture>
+	<Texture name="StorylineHelpPlateBox-Shadow-BottomRight" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Parts" virtual="true" >
+		<Size x="8" y="8"/>	
+		<TexCoords left="0.89062500" right="0.98828125" top="0.36523438" bottom="0.41406250"/>	
+	</Texture>
+	
+	<Texture name="!StorylineHelpPlateBox-Glow-Left" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Vertical2" virtual="true" vertTile="true" >
+		<Size x="5" y="32"/>	
+		<TexCoords left="0.25781250" right="0.30078125" top="0.00000000" bottom="1.00000000"/>	
+	</Texture>
+	<Texture name="!StorylineHelpPlateBox-Glow-Right" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Vertical2" virtual="true" vertTile="true" >
+		<Size x="5" y="32"/>	
+		<TexCoords left="0.20703125" right="0.25000000" top="0.00000000" bottom="1.00000000"/>	
+	</Texture>
+	<Texture name="!StorylineHelpPlateBox-Shadow-Left" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Vertical2" virtual="true" vertTile="true" >
+		<Size x="8" y="32"/>	
+		<TexCoords left="0.30859375" right="0.40625000" top="0.00000000" bottom="1.00000000"/>	
+	</Texture>
+	<Texture name="!StorylineHelpPlateBox-Shadow-Right" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Vertical2" virtual="true" vertTile="true" >
+		<Size x="8" y="32"/>	
+		<TexCoords left="0.41406250" right="0.51171875" top="0.00000000" bottom="1.00000000"/>	
+	</Texture>
+	
+	<Texture name="_StorylineHelpPlateBox-Glow-Bottom" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Horizontal2" virtual="true" horizTile="true" >
+		<Size x="32" y="5"/>	
+		<TexCoords left="0.00000000" right="1.00000000" top="0.24609375" bottom="0.28906250"/>	
+	</Texture>
+	<Texture name="_StorylineHelpPlateBox-Glow-Top" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Horizontal2" virtual="true" horizTile="true" >
+		<Size x="32" y="5"/>	
+		<TexCoords left="0.00000000" right="1.00000000" top="0.29687500" bottom="0.33984375"/>	
+	</Texture>
+	<Texture name="_StorylineHelpPlateBox-Shadow-Top" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Horizontal2" virtual="true" horizTile="true" >
+		<Size x="32" y="8"/>	
+		<TexCoords left="0.00000000" right="1.00000000" top="0.34765625" bottom="0.44531250"/>	
+	</Texture>
+	<Texture name="_StorylineHelpPlateBox-Shadow-Bottom" file="Interface\AddOns\Storyline\Artwork\TalentFrame\TalentFrame-Horizontal2" virtual="true" horizTile="true" >
+		<Size x="32" y="8"/>	
+		<TexCoords left="0.00000000" right="1.00000000" top="0.45312500" bottom="0.55078125"/>	
+	</Texture>
+	
+	
+	<Frame name="StorylineGlowBoxTemplate" virtual="true">
+		<Layers>
+			<!--
+			<Layer level="BACKGROUND" textureSubLevel="-1">
+				<Texture name="$parentColorBorder" setAllPoints="true">
+					<Color r="1" g="0.82353" b="0"/>
+				</Texture>
+			</Layer>
+			-->
+			<Layer level="BACKGROUND">
+				<Texture name="$parentBg">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="1" y="-1"/>
+						<Anchor point="BOTTOMRIGHT" x="-1" y="1"/>
+					</Anchors>
+					<Color r="1" g="1" b="1"/>
+					<Gradient orientation="VERTICAL">
+						<MinColor r="0.23" g="0.19" b="0"/>
+						<MaxColor r="0" g="0" b="0"/>
+					</Gradient>
+				</Texture>
+			</Layer>
+			
+			<Layer level="BORDER" textureSubLevel="-1">
+				
+				<Texture name="$parentGlowTopLeft" inherits="StorylineHelpPlateBox-Glow-TopLeft" parentKey="GlowTopLeft" alphaMode="ADD">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="-2" y="2"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentGlowTopRight" inherits="StorylineHelpPlateBox-Glow-TopRight" parentKey="GlowTopRight" alphaMode="ADD">
+					<Anchors>
+						<Anchor point="TOPRIGHT" x="2" y="2"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentGlowBottomLeft" inherits="StorylineHelpPlateBox-Glow-BottomLeft" parentKey="GlowBottomLeft" alphaMode="ADD">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" x="-2" y="-2"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentGlowBottomRight" inherits="StorylineHelpPlateBox-Glow-BottomRight" parentKey="GlowBottomRight" alphaMode="ADD">
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" x="2" y="-2"/>
+					</Anchors>
+				</Texture>
+
+				<Texture name="$parentGlowTop" inherits="_StorylineHelpPlateBox-Glow-Top" parentKey="GlowTop" alphaMode="ADD">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentGlowTopLeft" relativePoint="TOPRIGHT"/>
+						<Anchor point="TOPRIGHT" relativeTo="$parentGlowTopRight" relativePoint="TOPLEFT"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentGlowBottom" inherits="_StorylineHelpPlateBox-Glow-Bottom" parentKey="GlowBottom" alphaMode="ADD">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentGlowBottomLeft" relativePoint="BOTTOMRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentGlowBottomRight" relativePoint="BOTTOMLEFT"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentGlowLeft" inherits="!StorylineHelpPlateBox-Glow-Left" parentKey="GlowLeft" alphaMode="ADD">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentGlowTopLeft" relativePoint="BOTTOMLEFT"/>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentGlowBottomLeft" relativePoint="TOPLEFT"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentGlowRight" inherits="!StorylineHelpPlateBox-Glow-Right" parentKey="GlowRight" alphaMode="ADD">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativeTo="$parentGlowTopRight" relativePoint="BOTTOMRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentGlowBottomRight" relativePoint="TOPRIGHT"/>
+					</Anchors>
+				</Texture>	
+			</Layer>
+			
+			
+			<Layer level="BACKGROUND" textureSubLevel="-2">
+				
+				<Texture name="$parentShadowTopLeft" inherits="StorylineHelpPlateBox-Shadow-TopLeft" parentKey="ShadowTopLeft" >
+					<Anchors>
+						<Anchor point="TOPLEFT" x="-5" y="5"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentShadowTopRight" inherits="StorylineHelpPlateBox-Shadow-TopRight" parentKey="ShadowTopRight" >
+					<Anchors>
+						<Anchor point="TOPRIGHT" x="5" y="5"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentShadowBottomLeft" inherits="StorylineHelpPlateBox-Shadow-BottomLeft" parentKey="ShadowBottomLeft" >
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" x="-5" y="-5"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentShadowBottomRight" inherits="StorylineHelpPlateBox-Shadow-BottomRight" parentKey="ShadowBottomRight" >
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" x="5" y="-5"/>
+					</Anchors>
+				</Texture>
+				
+				<Texture name="$parentShadowTop" inherits="_StorylineHelpPlateBox-Shadow-Top" parentKey="ShadowTop" >
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentShadowTopLeft" relativePoint="TOPRIGHT"/>
+						<Anchor point="TOPRIGHT" relativeTo="$parentShadowTopRight" relativePoint="TOPLEFT"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentShadowBottom" inherits="_StorylineHelpPlateBox-Shadow-Bottom" parentKey="ShadowBottom" >
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentShadowBottomLeft" relativePoint="BOTTOMRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentShadowBottomRight" relativePoint="BOTTOMLEFT"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentShadowLeft" inherits="!StorylineHelpPlateBox-Shadow-Left" parentKey="ShadowLeft" >
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentShadowTopLeft" relativePoint="BOTTOMLEFT"/>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentShadowBottomLeft" relativePoint="TOPLEFT"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentShadowRight" inherits="!StorylineHelpPlateBox-Shadow-Right" parentKey="ShadowRight" >
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativeTo="$parentShadowTopRight" relativePoint="BOTTOMRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentShadowBottomRight" relativePoint="TOPRIGHT"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			
+		</Layers>
+	</Frame>
+	
+</Ui>

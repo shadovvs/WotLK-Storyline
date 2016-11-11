@@ -140,9 +140,16 @@ function Storyline_API.startDialog(targetType, fullText, event, eventInfo)
 		--Storyline_NPCFrameModelsMe:SetAnimation(520);
 		--Storyline_NPCFrameModelsYou:SetModel("world/expansion04/doodads/pandaren/scroll/pa_scroll_10.mo3");
 		Storyline_API.playAnimationDelay(Storyline_NPCFrameModelsYou, 520, 100, 10);
-		Storyline_NPCFrameModelsYou:SetModel("World\\Expansion02\\doodads\\dalaran\\dalaran_bookcase_01.m2");
-		Storyline_NPCFrameModelsYou:SetScale(0.67);
-		Storyline_NPCFrameModelsYou:SetPosition(0,-0.1,1.5);
+		--Storyline_NPCFrameModelsYou:SetModel("World\\Expansion02\\doodads\\dalaran\\dalaran_bookcase_01.m2");
+		--Storyline_NPCFrameModelsYou:SetScale(1.2);
+		--Storyline_NPCFrameModelsYou:SetPosition(0,-0.1,1.5);
+		
+		--CHANGES:Shadovv:changed bookcase to open book + "reading a book" animation
+		Storyline_NPCFrameModelsYou:SetModel("world\\generic\\human\\passive doodads\\books\\BookLargeOpen02.m2");
+		Storyline_NPCFrameModelsYou:SetPosition(0,-0.5,-0.4);
+		Storyline_NPCFrameModelsMe:SetPosition(0, 0, 0.25);
+		Storyline_API.playAnimationDelay(Storyline_NPCFrameModelsMe, 140, 30, 0.5);
+		
 	end
 	Storyline_NPCFrameModelsYou.model = Storyline_NPCFrameModelsYou:GetModel();
 
@@ -159,6 +166,11 @@ function Storyline_API.startDialog(targetType, fullText, event, eventInfo)
 		scale = Storyline_Data.debug.scaling[key] or Storyline_SCALE_MAPPING[key] or -(Storyline_Data.debug.scaling[invertKey] or Storyline_SCALE_MAPPING[invertKey] or 0);
 	end
 	Storyline_NPCFrameDebugScaleSlider:SetValue(scale);
+	
+	--CHANGE:Shadovv: changes position of some creatures defined in structures
+	if (Storyline_C_POSITION[Storyline_NPCFrameModelsYou.model] ~= nil) then
+		Storyline_NPCFrameModelsYou:SetPosition(Storyline_C_POSITION[Storyline_NPCFrameModelsYou.model][1],Storyline_C_POSITION[Storyline_NPCFrameModelsYou.model][2],Storyline_C_POSITION[Storyline_NPCFrameModelsYou.model][3]);
+	end;
 
 	fullText = fullText:gsub(LINE_FEED_CODE .. "+", "\n");
 	fullText = fullText:gsub(WEIRD_LINE_BREAK, "\n");

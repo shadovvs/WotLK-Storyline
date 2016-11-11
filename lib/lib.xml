@@ -20,6 +20,7 @@
 	-->
 
 	<Script file="LibStub\LibStub.lua"/>
+	<Include file="StorylineGlowBoxTemplate.xml"/>
 	<Include file="AceAddon-3.0\AceAddon-3.0.xml"/>
 	<Include file="AceConsole-3.0\AceConsole-3.0.xml"/>
 
@@ -220,77 +221,68 @@
 	</EditBox>
 
 	<!-- Tutorial style hovered frame -->
-	<!-- Changes:Lanrutcon:added files, inherits wasn't working properly, also added name fields-->
-	<Frame name="Storyline_HoveredFrame" inherits="GlowBoxTemplate" virtual="true">
+	<Frame name="Storyline_HoveredFrame" inherits="StorylineGlowBoxTemplate" virtual="true">
 		<Size x="220" y="100"/>
 		<Layers>
 			<Layer level="ARTWORK">
-				<Texture name="$parent.ArrowUP" parentKey="ArrowUP" file="Interface\TalentFrame\TalentFrame-Parts" hidden="true">
+				<Texture parentKey="ArrowUP" inherits="HelpPlateArrowDOWN" hidden="true">
 					<Size x="53" y="21"/>
 					<Anchors>
 						<Anchor point="TOP" relativePoint="BOTTOM" x="0" y="3"/>
 					</Anchors>
-					<TexCoords left="0.78515625" right="0.99218750" bottom="0.54687500" top="0.58789063"/>
 				</Texture>
-				<Texture name="$parent.ArrowDOWN" parentKey="ArrowDOWN" file="Interface\TalentFrame\TalentFrame-Parts" hidden="true">
+				<Texture parentKey="ArrowDOWN" inherits="HelpPlateArrowUP" hidden="true">
 					<Size x="53" y="21"/>
 					<Anchors>
 						<Anchor point="BOTTOM" relativePoint="TOP" x="0" y="-3"/>
 					</Anchors>
-					<TexCoords left="0.78515625" right="0.99218750" bottom="0.54687500" top="0.58789063"/>	
 				</Texture>
-				<Texture name="$parent.ArrowRIGHT" parentKey="ArrowRIGHT" file="Interface\TalentFrame\TalentFrame-Parts" hidden="true">
+				<Texture parentKey="ArrowRIGHT" inherits="HelpPlateArrowDOWN" hidden="true">
 					<Size x="53" y="21"/>
 					<Anchors>
 						<Anchor point="RIGHT" relativePoint="LEFT" x="3" y="0"/>
 					</Anchors>
-					<TexCoords left="0.78515625" right="0.99218750" bottom="0.54687500" top="0.58789063"/>
 				</Texture>
-				<Texture name="$parent.ArrowLEFT" parentKey="ArrowLEFT" file="Interface\TalentFrame\TalentFrame-Parts" hidden="true">
+				<Texture parentKey="ArrowLEFT" inherits="HelpPlateArrowDOWN" hidden="true">
 					<Size x="53" y="21"/>
 					<Anchors>
 						<Anchor point="LEFT" relativePoint="RIGHT" x="-3" y="0"/>
 					</Anchors>
-					<TexCoords left="0.78515625" right="0.99218750" bottom="0.54687500" top="0.58789063"/>
 				</Texture>
 			</Layer>
 			<Layer level="BORDER">
-				<Texture name="$parent.ArrowGlowUP" parentKey="ArrowGlowUP" file="Interface\TalentFrame\TalentFrame-Parts" hidden="true" alphaMode="ADD" alpha="0.5">
-					<Size x="63" y="28"/>
+				<Texture parentKey="ArrowGlowUP" inherits="HelpPlateArrow-GlowDOWN" hidden="true" alphaMode="ADD" alpha="0.5">
+					<Size x="53" y="21"/>
 					<Anchors>
 						<Anchor point="TOP" relativePoint="BOTTOM" x="0" y="3"/>
 					</Anchors>
-					<TexCoords left="0.40625000" right="0.66015625" bottom="0.77343750" top="0.82812500"/>
 				</Texture>
-				<Texture name="$parent.ArrowGlowDOWN" parentKey="ArrowGlowDOWN" file="Interface\TalentFrame\TalentFrame-Parts" hidden="true" alphaMode="ADD" alpha="0.5">
-					<Size x="63" y="28"/>		
+				<Texture parentKey="ArrowGlowDOWN" inherits="HelpPlateArrow-GlowUP" hidden="true" alphaMode="ADD" alpha="0.5">
+					<Size x="53" y="21"/>
 					<Anchors>
 						<Anchor point="BOTTOM" relativePoint="TOP" x="0" y="-3"/>
 					</Anchors>
-					<TexCoords left="0.40625000" right="0.66015625" bottom="0.77343750" top="0.82812500"/>	
 				</Texture>
-				<Texture name="$parent.ArrowGlowRIGHT" parentKey="ArrowGlowRIGHT" file="Interface\TalentFrame\TalentFrame-Parts" hidden="true" alphaMode="ADD" alpha="0.5">
-					<Size x="63" y="28"/>
+				<Texture parentKey="ArrowGlowRIGHT" inherits="HelpPlateArrow-GlowDOWN" hidden="true" alphaMode="ADD" alpha="0.5">
+					<Size x="53" y="21"/>
 					<Anchors>
 						<Anchor point="RIGHT" relativePoint="LEFT" x="3" y="0"/>
 					</Anchors>
-					<TexCoords left="0.40625000" right="0.66015625" bottom="0.77343750" top="0.82812500"/>
 				</Texture>
-				<Texture name="$parent.ArrowGlowLEFT" parentKey="ArrowGlowLEFT" file="Interface\TalentFrame\TalentFrame-Parts" hidden="true" alphaMode="ADD" alpha="0.5">
-					<Size x="63" y="28"/>
+				<Texture parentKey="ArrowGlowLEFT" inherits="HelpPlateArrow-GlowDOWN" hidden="true" alphaMode="ADD" alpha="0.5">
+					<Size x="53" y="21"/>
 					<Anchors>
 						<Anchor point="LEFT" relativePoint="RIGHT" x="-3" y="0"/>
 					</Anchors>
-					<TexCoords left="0.40625000" right="0.66015625" bottom="0.77343750" top="0.82812500"/>
 				</Texture>
 			</Layer>
 		</Layers>
 		<Scripts>
 			<OnLoad>
-				SetClampedTextureRotation(_G[self:GetName()..".ArrowLEFT"], 270);
-				SetClampedTextureRotation(_G[self:GetName()..".ArrowRIGHT"], 90);
-				SetClampedTextureRotation(_G[self:GetName()..".ArrowGlowLEFT"], 270);
-				SetClampedTextureRotation(_G[self:GetName()..".ArrowGlowRIGHT"], 90);
+				SetClampedTextureRotation(self.ArrowLEFT, 270);
+				SetClampedTextureRotation(self.ArrowRIGHT, 90);
+				SetClampedTextureRotation(self.ArrowGlowLEFT, 270);
+				SetClampedTextureRotation(self.ArrowGlowRIGHT, 90);
 			</OnLoad>
 		</Scripts>
 	</Frame>
@@ -339,5 +331,5 @@
 			<OnEvent function="Storyline_EventDispatcher"/>
 		</Scripts>
 	</Frame>
-
+	
 </Ui>

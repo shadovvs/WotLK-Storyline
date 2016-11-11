@@ -46,7 +46,7 @@ Storyline_ANIMATION_SEQUENCE_DURATION = {
 	[YES_ID] = 3.000,
 	[NOPE_ID] = 3.000,
 	[ACLAIM_ID] = 2.400,
-	["3"] = 1.500,
+	["0"] = 1.500,
 }
 
 Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
@@ -191,19 +191,19 @@ Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
 	},
 	-- GOBLIN
 	["character\\goblin\\male\\goblinmale.m2"] = {
-		[TALK_ID] = 4.3,
-		[QUESTION_ID] = 3.7,
-		[EXCLAME_ID] = 2.600,
-		[YES_ID] = 2.5,
-		[NOPE_ID] = 2.8,
+		[TALK_ID] = 1.7,
+		[QUESTION_ID] = 1.7,
+		[EXCLAME_ID] = 2.000,
+		[YES_ID] = 0,
+		[NOPE_ID] = 0,
 		[ACLAIM_ID] = 3.2,
 	},
 	["character\\goblin\\female\\goblinfemale.m2"] = {
-		[TALK_ID] = 4.2,
-		[QUESTION_ID] = 4.2,
-		[EXCLAME_ID] = 3.5,
-		[YES_ID] = 2.6,
-		[NOPE_ID] = 2.5,
+		[TALK_ID] = 1.7,
+		[QUESTION_ID] = 1.7,
+		[EXCLAME_ID] = 2.000,
+		[YES_ID] = 0,
+		[NOPE_ID] = 0,
 		[ACLAIM_ID] = 1.8,
 	},
 	-- Blood elves
@@ -218,6 +218,7 @@ Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
 	["character\\bloodelf\\female\\bloodelffemale.m2"] = {
 		["185"] = 1.4,
 		["65"] = 1.4,
+		["60"] = 2.8,
 		["68"] = 1.5,
 		["186"] = 2,
 		["64"] = 2.8,
@@ -230,6 +231,7 @@ Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
 	["character\\tauren\\female\\taurenfemale.m2"] = {
 		["185"] = 1.5,
 		["186"] = 1.8,
+		[TALK_ID] = 2.90,
 		["65"] = 1.7,
 		["64"] = 1.9,
 		["68"] = 1.8,
@@ -247,6 +249,7 @@ Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
 		["185"] = 1.4,
 		["186"] = 1.6,
 		["65"] = 1.4,
+		["60"] = 2.4,
 		["64"] = 2,
 		["68"] = 2.1,
 	},
@@ -262,6 +265,15 @@ Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
 	["character\\scourge\\male\\scourgemale.m2"] = {
 		["185"] = 1.8,
 		["186"] = 1.8,
+		[TALK_ID] = 2.500,
+		["65"] = 2,
+		["64"] = 2.2,
+		["68"] = 2.1,
+	},
+	["character\\scourge\\female\\scourgefemale.m2"] = {
+		["185"] = 1.8,
+		["186"] = 1.8,
+		[TALK_ID] = 2.0,
 		["65"] = 2,
 		["64"] = 2.2,
 		["68"] = 2.1,
@@ -303,11 +315,51 @@ Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
 		[TALK_ID] = 3.2,
 	},
 	["creature\\furbolg\\furbolg.m2"] = {
-		[TALK_ID] = 1.9,
+		[TALK_ID] = 2.6,
+	},
+	["character\\tuskarr\\male\\tuskarrmale.m2"] = {
+		[TALK_ID] = 3.0,
+	},
+	["creature\\ogre\\ogre.m2"] = {
+		[TALK_ID] = 2.0,
 	},
 }
 
 Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["creature\\jinyu\\jinyu.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\nightelf\\male\\nightelfmale.m2"];
+
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\taunka\\male\\taunkamale.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\tauren\\male\\taurenmale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\taunka\\female\\taunkafemale.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\tauren\\female\\taurenfemale.m2"];
+
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["creature\\alexstrasza\\ladyalexstrasa.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\bloodelf\\female\\bloodelffemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["creature\\ladysylvanaswindrunner\\ladysylvanaswindrunner.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\bloodelf\\female\\bloodelffemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["creature\\ogre\\ogrewarlord.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["creature\\ogre\\ogre.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["creature\\ogre\\ogremage.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["creature\\ogre\\ogre.m2"];
+
+
+--WotLK with WoD models for npc
+--[[
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\nightelf\\male\\nightelfmalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\nightelf\\male\\nightelfmale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\nightelf\\female\\nightelffemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\nightelf\\female\\nightelffemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\dwarf\\male\\dwarfmalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\dwarf\\male\\dwarfmale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\dwarf\\female\\dwarffemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\dwarf\\female\\dwarffemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\gnome\\male\\gnomemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\gnome\\male\\gnomemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\gnome\\female\\gnomefemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\gnome\\female\\gnomefemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\human\\male\\humanmalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\human\\male\\humanmale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\human\\female\\humanfemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\human\\female\\humanfemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\draenei\\female\\draeneifemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\draenei\\female\\draeneifemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\draenei\\male\\draeneimalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\draenei\\male\\draeneimale.m2"];
+
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\scourge\\male\\scourgemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\scourge\\male\\scourgemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\scourge\\female\\scourgefemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\scourge\\male\\scourgemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\orc\\female\\orcfemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\orc\\female\\orcfemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\orc\\male\\orcmalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\orc\\male\\orcmale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\bloodelf\\male\\bloodelfmalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\bloodelf\\male\\bloodelfmale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\bloodelf\\female\\bloodelffemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\bloodelf\\female\\bloodelffemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\tauren\\female\\taurenfemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\tauren\\female\\taurenfemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\tauren\\male\\taurenmalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\tauren\\male\\taurenmale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\troll\\female\\trollfemalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\troll\\female\\trollfemale.m2"];
+Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\troll\\male\\trollmalenpc.m2"] = Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL["character\\troll\\male\\trollmale.m2"];
+]]
 
 --*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 -- Animation mapping
@@ -344,6 +396,57 @@ Storyline_ANIM_MAPPING["creature\\arakkoaoutland\\arakkoaoutland.m2"] = ALL_TO_T
 Storyline_ANIM_MAPPING["creature\\dreadravenwarbird\\dreadravenwarbirdwind.m2"] = ALL_TO_NONE;
 Storyline_ANIM_MAPPING["creature\\satyr\\satyr.m2"] = ALL_TO_NONE;
 Storyline_ANIM_MAPPING["creature\\furbolg\\furbolg.m2"] = ALL_TO_TALK;
+
+--CHANGE:Shadovv: added more creatures that don't have any animation or only talk animation
+
+Storyline_ANIM_MAPPING["creature\\humanmalekid\\argentsquirehumanmalekid.m2"] = ALL_TO_TALK;
+Storyline_ANIM_MAPPING["character\\tuskarr\\male\\tuskarrmale.m2"] = ALL_TO_TALK;
+Storyline_ANIM_MAPPING["creature\\dryad\\dryad.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\murloc\\murloc.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\airelemental\\airelemental.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\frostnymph\\frostnymph.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\fleshgolem\\fleshgolem.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\mountaingiantoutland\\mountaingiant_zangarmarsh.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\bear\\bear.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\harkoa\\harkoa.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\mountaingiantnorthrend\\mountaingiant_howling.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\northrendgeist\\northrendgeist.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\wolvar\\wolvar.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\oracle\\oracle.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\ghost\\ghost.m2"] = ALL_TO_NONE;
+Storyline_ANIM_MAPPING["creature\\ogre\\ogrewarlord.m2"] = ALL_TO_TALK;
+Storyline_ANIM_MAPPING["creature\\ogre\\ogre.m2"] = ALL_TO_TALK;
+Storyline_ANIM_MAPPING["creature\\ogre\\ogremage.m2"] = ALL_TO_TALK;
+
+--CHANGE:Shadovv
+--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+-- Creature model positions
+--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Storyline_C_POSITION = {}
+--z,x,y
+Storyline_C_POSITION["creature\\frostnymph\\frostnymph.m2"] = {0, 0.5, 0.8};
+Storyline_C_POSITION["creature\\dryad\\dryad.m2"] = {0, 0.5, 0.8};
+Storyline_C_POSITION["creature\\fleshgolem\\fleshgolem.m2"] = {-2.2, 0.0, 0.0};
+Storyline_C_POSITION["creature\\airelemental\\airelemental.m2"] = {-1, 0.0, 1.0};
+Storyline_C_POSITION["creature\\murloc\\murloc.m2"] = {0.0, 0.0, 0.4};
+Storyline_C_POSITION["character\\goblin\\male\\goblinmale.m2"] = {-2.0, 0.0, -0.5};
+Storyline_C_POSITION["character\\goblin\\female\\goblinfemale.m2"] = {-2.0, 0.0, -0.5};
+Storyline_C_POSITION["character\\gnome\\female\\gnomefemale.m2"] = {-2.0, 0.0, -0.5};
+Storyline_C_POSITION["character\\gnome\\male\\gnomemale.m2"] = {-2.0, 0.0, -0.5};
+Storyline_C_POSITION["creature\\mountaingiantoutland\\mountaingiant_zangarmarsh.m2"] = {-16, -1.5, -5.5};
+Storyline_C_POSITION["creature\\bear\\bear.m2"] = {-1.1, 0.0, 0.0};
+Storyline_C_POSITION["creature\\harkoa\\harkoa.m2"] = {-0.5, -0.2, 0.0};
+Storyline_C_POSITION["creature\\mountaingiantnorthrend\\mountaingiant_howling.m2"] = {-16, -5.0, 7.5};
+Storyline_C_POSITION["creature\\wolvar\\wolvar.m2"] = {-1.0, 0.6, 0.0};
+Storyline_C_POSITION["creature\\oracle\\oracle.m2"] = {-1.0, 0.4, 0.0};
+Storyline_C_POSITION["creature\\dragon\\northrenddragon.m2"] = {-22, 0, 35};
+Storyline_C_POSITION["creature\\ghost\\ghost.m2"] = {0.0, 0, 3.3};
+Storyline_C_POSITION["creature\\banshee\\banshee.m2"] = {0.0, 0.9, 3.3};
+Storyline_C_POSITION["creature\\nerubianwarrior\\nerubianwarrior.m2"] = {-7.0, -0.2, -2.8};
+
+--Move orcs with weapons a bit to the right
+Storyline_C_POSITION["character\\orc\\male\\orcmale.m2"] = {0.0, 0.3, 0.0};
 
 Storyline_SCALE_MAPPING = {};
 

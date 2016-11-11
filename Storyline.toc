@@ -1,4 +1,4 @@
-## Interface: 40300
+## Interface: 30300
 ## Title: Storyline
 ## Author: Telkostrasz
 ## Version: 1.1
