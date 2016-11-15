@@ -499,8 +499,8 @@
 					<!--
 					 TODO Use cinematicModels instead of PlayerModels
 					 -->
-					<!-- CHANGES:Lanrutcon:Increased frameLevel to 4 -->
-					<PlayerModel name="Storyline_NPCFrameModelsMe" frameLevel="4">
+					<!-- CHANGES:Shadovv:Decreased frameLevel to 4 -->
+					<PlayerModel name="Storyline_NPCFrameModelsMe" frameLevel="1">
 						<Anchors>
 							<Anchor point="TOP" x="0" y="0"/>
 							<Anchor point="BOTTOM" x="0" y="0"/>
@@ -508,8 +508,8 @@
 							<Anchor point="RIGHT" relativeTo="Storyline_NPCFrameModelsPoint" relativePoint="LEFT" x="0" y="0"/>
 						</Anchors>
 					</PlayerModel>
-					<!-- CHANGES:Lanrutcon:Increased frameLevel to 4 -->
-					<PlayerModel name="Storyline_NPCFrameModelsYou" frameLevel="4">
+					<!-- CHANGES:Shadovv:Decreased frameLevel to 4 -->
+					<PlayerModel name="Storyline_NPCFrameModelsYou" frameLevel="1">
 						<Anchors>
 							<Anchor point="TOP" x="0" y="0"/>
 							<Anchor point="BOTTOM" x="0" y="0"/>

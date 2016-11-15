@@ -72,7 +72,7 @@ function Storyline_API.selectMultipleGossip(button)
 	local previous = Storyline_NPCFrameGossipChoices.Title;
 	local data = { GetGossipOptions() };
 	local height = 40;
-	local width = 250; --345
+	local width = 280; --345
 	for i = 1, GetNumGossipOptions() do
 		local gossip, gossipType = data[(i * 2) - 1], data[(i * 2)];
 		previous = getSelectionFontString(previous);
@@ -139,7 +139,8 @@ function Storyline_API.selectMultipleActive(button)
 	local width = 250;
 	for i = 1, GetNumGossipActiveQuests() do
 		--CHANGE:centurijon:isLegendary not returned in 3.4
-		local title, lvl, isTrivial, isComplete, isRepeatable = data[(i * 5) - 4], data[(i * 5) - 3], data[(i * 5) - 2], data[(i * 5) - 1], data[(i * 5)];
+		--CHANGE:Shadovv:isRepeatable return value for GetGossipActiveQuests() does not exist in 3.3.5
+		local title, lvl, isTrivial, isComplete = data[(i * 4) - 3], data[(i * 4) - 2], data[(i * 4) - 1], data[(i * 4)];
 		previous = getSelectionFontString(previous);
 		previous.Text:SetText("|T" .. getQuestActiveIcon(isComplete) .. ":20:20|t" .. title .. getQuestTriviality(isTrivial));
 		previous:SetScript("OnClick", function(self)

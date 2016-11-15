@@ -658,6 +658,7 @@ end
 eventHandlers["QUEST_COMPLETE"] = function(eventInfo)
 	Storyline_NPCFrameRewards:Show();
 	setTooltipForSameFrame(Storyline_NPCFrameRewardsItem, "TOP", 0, 0, REWARDS, loc("SL_GET_REWARD"));
+	questHasRewards = false;
 
 	--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 	-- Rewards structure
@@ -796,6 +797,7 @@ eventHandlers["QUEST_COMPLETE"] = function(eventInfo)
 		Storyline_NPCFrameRewards.Content.RewardText1:Hide();
 	else
 		Storyline_NPCFrameRewards.Content.RewardText1:Show();
+		questHasRewards = true;
 	end
 	contentHeight = contentHeight + gridHeight;
 
@@ -804,6 +806,7 @@ eventHandlers["QUEST_COMPLETE"] = function(eventInfo)
 	--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 	if GetNumQuestChoices() > 1 then
+		questHasRewards = true;
 
 		if faction and faction:len() > 0 then
 			bestIcon = "Interface\\ICONS\\battleground_strongbox_gold_" .. faction;
@@ -844,6 +847,7 @@ eventHandlers["QUEST_COMPLETE"] = function(eventInfo)
 	local spellReward = texture and (not isBoostSpell or IsCharacterNewlyBoosted()) and (not garrFollowerID or not C_Garrison.IsFollowerCollected(garrFollowerID));
 
 	if spellReward then
+		questHasRewards = true;
 
 		if isTradeskillSpell then
 			Storyline_NPCFrameRewards.Content.RewardTextSpell:SetText(REWARD_TRADESKILL_SPELL);
@@ -891,6 +895,12 @@ eventHandlers["QUEST_COMPLETE"] = function(eventInfo)
 	end
 
 	showQuestPortraitFrame();
+	
+	--CHANGE:TODO:Shadovv: There is no need for NPCFrameRewards, quest does not give any rewards
+	if (questHasRewards == false) then
+		--Storyline_NPCFrameRewards:Hide();
+		--GetQuestReward();
+	end;
 
 	Storyline_NPCFrameRewardsItemIcon:SetTexture(bestIcon);
 	contentHeight = contentHeight + Storyline_NPCFrameRewards.Content.Title:GetHeight() + 15;

@@ -447,6 +447,8 @@ Storyline_C_POSITION["creature\\nerubianwarrior\\nerubianwarrior.m2"] = {-7.0, -
 
 --Move orcs with weapons a bit to the right
 Storyline_C_POSITION["character\\orc\\male\\orcmale.m2"] = {0.0, 0.3, 0.0};
+Storyline_C_POSITION["character\\orc\\male\\orcmale.m2"] = {0.0, 0.3, 0.0};
+Storyline_C_POSITION["character\\bloodelf\\male\\bloodelfmale.m2"] = {0.0, 0.2, 0.0};
 
 Storyline_SCALE_MAPPING = {};
 
