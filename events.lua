@@ -232,7 +232,8 @@ local function acceptQuest()
 	else
 		if QuestFrame.autoQuest then
 			--AcknowledgeAutoAcceptQuest();		--MoP function that notices user that is a auto-aceept quest
-			QuestFrame:Hide();
+			--CHANGE:Shadovv: Quest is automatically accepted, closing the window
+			CloseQuest();
 		else
 			AcceptQuest();
 		end
