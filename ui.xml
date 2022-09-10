@@ -95,44 +95,6 @@
 					<TexCoords left="0.00000000" right="1.00000000" top="0.34375000" bottom="0.52148438"/>
 				</Texture>
 			</Layer>
-			<Layer level="OVERLAY" textureSubLevel="2">
-				<Texture parentKey="LeftHide" inherits="QuestChoiceLeftHide">
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeTo="$parent.BorderTopLeft" relativePoint="BOTTOMLEFT" x="10"
-								y="10"/>
-					</Anchors>
-				</Texture>
-				<Texture parentKey="LeftHide2" inherits="QuestChoiceLeftHide">
-					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativeTo="$parent.BorderBottomLeft" relativePoint="TOPLEFT" x="10"
-								y="-10"/>
-					</Anchors>
-				</Texture>
-				<Texture parentKey="RightHide" inherits="QuestChoiceRightHide">
-					<Anchors>
-						<Anchor point="TOPRIGHT" relativeTo="$parent.BorderTopRight" relativePoint="BOTTOMRIGHT" x="-8"
-								y="8"/>
-					</Anchors>
-				</Texture>
-				<Texture parentKey="RightHide2" inherits="QuestChoiceRightHide">
-					<Anchors>
-						<Anchor point="BOTTOMRIGHT" relativeTo="$parent.BorderBottomRight" relativePoint="TOPRIGHT"
-								x="-10" y="-10"/>
-					</Anchors>
-				</Texture>
-				<Texture parentKey="BottomHide" inherits="QuestChoiceBottomHide">
-					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativeTo="$parent.BorderBottomLeft" relativePoint="BOTTOMRIGHT"
-								x="-10" y="11"/>
-					</Anchors>
-				</Texture>
-				<Texture parentKey="BottomHide2" inherits="QuestChoiceBottomHide">
-					<Anchors>
-						<Anchor point="BOTTOMRIGHT" relativeTo="$parent.BorderBottomRight" relativePoint="BOTTOMLEFT"
-								x="15" y="11"/>
-					</Anchors>
-				</Texture>
-			</Layer>
 			<Layer level="BACKGROUND">
 				<Texture file="Interface\AddOns\Storyline\Artwork\QuestionFrame\question-background" vertTile="true" horizTile="true">
 					<Anchors>
